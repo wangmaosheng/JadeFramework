@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/wangmaosheng/JadeFramework.git</PackageProjectUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Copyright>Jade</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

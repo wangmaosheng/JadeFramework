@@ -2,11 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/wangmaosheng/JadeFramework.git</PackageProjectUrl>
+    <Copyright>Jade</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>E:\ms project\mssystem\JadeFramework.DLL\JadeFramework.Core.xml</DocumentationFile>
-    <OutputPath>E:\ms project\mssystem\JadeFramework.DLL\</OutputPath>
+    <DocumentationFile></DocumentationFile>
+    <OutputPath></OutputPath>
     <Optimize>true</Optimize>
   </PropertyGroup>
 

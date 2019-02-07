@@ -2,12 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/wangmaosheng/JadeFramework.git</PackageProjectUrl>
+    <Copyright>Jade</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>true</Optimize>
-    <OutputPath>E:\ms project\mssystem\JadeFramework.DLL\</OutputPath>
-    <DocumentationFile>E:\ms project\mssystem\JadeFramework.DLL\JadeFramework.Dapper.xml</DocumentationFile>
+    <OutputPath></OutputPath>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
