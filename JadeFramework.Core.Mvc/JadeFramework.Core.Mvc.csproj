@@ -7,14 +7,15 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Jade</Authors>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/22044556?s=40&amp;u=d08c24d125e91789e90fe42d1576f1a9d88db8ba&amp;v=4</PackageIconUrl>
-    <Version>1.0.1.1</Version>
+    <Version>1.0.1.2</Version>
     <Description>mvc 扩展</Description>
+    <PackageReleaseNotes>XML注释</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>false</Optimize>
     <OutputPath></OutputPath>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>F:\个人项目\GitHub\JadeFramework\JadeFramework.Core.Mvc\bin\Debug\JadeFramework.Core.Mvc.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

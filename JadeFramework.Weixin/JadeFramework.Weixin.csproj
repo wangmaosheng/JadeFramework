@@ -7,8 +7,13 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Jade</Authors>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/22044556?s=40&amp;u=d08c24d125e91789e90fe42d1576f1a9d88db8ba&amp;v=4</PackageIconUrl>
-    <Version>1.0.1.1</Version>
+    <Version>1.0.1.2</Version>
     <Description>基于微信基本功能封装</Description>
+    <PackageReleaseNotes>XML注释</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>F:\个人项目\GitHub\JadeFramework\JadeFramework.Weixin\bin\Debug\JadeFramework.Weixin.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
