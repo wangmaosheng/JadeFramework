@@ -638,7 +638,19 @@ namespace JadeFramework.Dapper
 
         int Execute(CommandDefinition command);
         int Execute(string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null);
+        /// <summary>
+        /// SQL≤È—Ø
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="param"></param>
+        /// <returns></returns>
         IEnumerable<TEntity> Query(string sql, object param = null);
+        /// <summary>
+        /// SQL≤È—Ø
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="param"></param>
+        /// <returns></returns>
         Task<IEnumerable<TEntity>> QueryAsync(string sql, object param = null);
         T ExecuteScalar<T>(string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null);
         object ExecuteScalar(string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null);
