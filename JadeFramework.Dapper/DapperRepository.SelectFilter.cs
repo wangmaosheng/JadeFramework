@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,6 +11,16 @@ namespace JadeFramework.Dapper
     /// <typeparam name="TEntity"></typeparam>
     public partial class DapperRepository<TEntity> where TEntity : class
     {
-
+        /// <summary>
+        ///     
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="filterSql"></param>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        public virtual IEnumerable<TEntity> QueryFilter(string sql,string filterSql, object param = null)
+        {
+            return Connection.Query<TEntity>(sql + filterSql, param);
+        }
     }
 }
