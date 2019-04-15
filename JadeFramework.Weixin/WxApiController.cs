@@ -12,7 +12,7 @@ namespace JadeFramework.Weixin
     /// <summary>
     /// 微信接口接入
     /// </summary>
-    public abstract class WxApiController : Controller
+    public abstract class WxApiController : ControllerBase
     {
 
 
