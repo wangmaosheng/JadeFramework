@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -12,6 +12,26 @@ namespace JadeFramework.Core.Extensions
     /// </summary>
     public static class ObjectExtensions
     {
+        /// <summary>
+        /// Json转对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="json"></param>
+        /// <returns></returns>
+        public static T ToObject<T>(this string json) where T : class
+        {
+            return JsonConvert.DeserializeObject<T>(json);
+        }
+
+        /// <summary>
+        /// 对象转JSON
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static string ToJson(this object obj)
+        {
+            return JsonConvert.SerializeObject(obj);
+        }
 
         /// <summary>
         /// 将对象序列化成url参数形式
