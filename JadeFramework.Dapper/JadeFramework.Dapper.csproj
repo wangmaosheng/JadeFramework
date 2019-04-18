@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -13,9 +13,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Optimize>true</Optimize>
-    <OutputPath></OutputPath>
-    <DocumentationFile>F:\个人项目\GitHub\JadeFramework\JadeFramework.Dapper\bin\Debug\JadeFramework.Dapper.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\JadeFramework.Dapper.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

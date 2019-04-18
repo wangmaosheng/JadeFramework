@@ -13,7 +13,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>F:\个人项目\GitHub\JadeFramework\JadeFramework.ServiceRegistration\bin\Debug\JadeFramework.ServiceRegistration.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\JJadeFramework.ServiceRegistration.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\JadeFramework.ServiceRegistration.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
