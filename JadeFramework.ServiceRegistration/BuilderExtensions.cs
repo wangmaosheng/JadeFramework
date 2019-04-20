@@ -1,14 +1,17 @@
-﻿using Consul;
-using JadeFramework.Core.Consul;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Hosting.Server.Features;
-using Microsoft.AspNetCore.Http.Features;
-using Microsoft.Extensions.Options;
-using System;
-using System.Linq;
-
-namespace Microsoft.AspNetCore.Builder
+﻿namespace Microsoft.AspNetCore.Builder
 {
+    using Consul;
+    using JadeFramework.Core.Consul;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Hosting.Server.Features;
+    using Microsoft.AspNetCore.Http.Features;
+    using Microsoft.Extensions.Options;
+    using System;
+    using System.Linq;
+
+    /// <summary>
+    /// Consul 中间件扩展
+    /// </summary>
     public static class BuilderExtensions
     {
         /// <summary>
@@ -69,8 +72,8 @@ namespace Microsoft.AspNetCore.Builder
 
                 var httpCheck = new AgentServiceCheck()
                 {
-                    DeregisterCriticalServiceAfter = TimeSpan.FromMinutes(1),
-                    Interval = TimeSpan.FromSeconds(30),
+                    DeregisterCriticalServiceAfter = serviceOptions.Service.DeregisterCriticalServiceAfter,
+                    Interval = serviceOptions.Service.Interval,
                     HTTP = new Uri(address, checkOptions.HealthCheckUrl).OriginalString
                 };
 
