@@ -7,7 +7,7 @@
     <Copyright>Jade</Copyright>
     <Authors>Jade</Authors>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/22044556?s=40&amp;u=d08c24d125e91789e90fe42d1576f1a9d88db8ba&amp;v=4</PackageIconUrl>
-    <Version>1.0.1.4</Version>
+    <Version>1.0.1.6</Version>
     <Description>基于Consul服务发现 中间件封装</Description>
     <PackageReleaseNotes>consul可配置</PackageReleaseNotes>
   </PropertyGroup>
