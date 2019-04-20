@@ -15,9 +15,6 @@
         /// 间隔
         /// 默认10秒一次
         /// </summary>
-        public TimeSpan Interval { get; set; } = TimeSpan.FromSeconds(10);
-
-
-        public TimeSpan DeregisterCriticalServiceAfter { get; set; } = TimeSpan.FromMinutes(1);
+        public int Interval { get; set; } = 10;
     }
 }

@@ -72,8 +72,8 @@
 
                 var httpCheck = new AgentServiceCheck()
                 {
-                    DeregisterCriticalServiceAfter = serviceOptions.Service.DeregisterCriticalServiceAfter,
-                    Interval = serviceOptions.Service.Interval,
+                    DeregisterCriticalServiceAfter = TimeSpan.FromMinutes(1),
+                    Interval = TimeSpan.FromSeconds(serviceOptions.Service.Interval),
                     HTTP = new Uri(address, checkOptions.HealthCheckUrl).OriginalString
                 };
 
