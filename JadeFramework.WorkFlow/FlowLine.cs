@@ -43,6 +43,12 @@ namespace JadeFramework.WorkFlow
         /// </summary>
         [JsonProperty("dash")]
         public bool Dash { get; set; }
+
+        /// <summary>
+        /// 属性值对象
+        /// </summary>
+        [JsonProperty("setInfo")]
+        public FlowLineSetInfo SetInfo { get; set; }
     }
     /// <summary>
     /// 线条自定义信息
