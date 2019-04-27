@@ -8,6 +8,9 @@ namespace JadeFramework.WorkFlow
     /// </summary>
     public abstract class Entity
     {
+        /// <summary>
+        /// 实例化
+        /// </summary>
         public Entity()
         {
             this.CreateTime = DateTime.Now.ToTimeStamp();
@@ -21,6 +24,6 @@ namespace JadeFramework.WorkFlow
         /// <summary>
         /// 创建人
         /// </summary>
-        public string CreateUserId { get; set; }
+        public virtual string CreateUserId { get; set; }
     }
 }
