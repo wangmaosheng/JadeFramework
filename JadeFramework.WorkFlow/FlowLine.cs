@@ -1,8 +1,9 @@
-﻿using Newtonsoft.Json;
-using System;
-
-namespace JadeFramework.WorkFlow
+﻿namespace JadeFramework.WorkFlow
 {
+    using Newtonsoft.Json;
+    using System;
+    using System.ComponentModel;
+
     /// <summary>
     /// 流程连线
     /// </summary>
@@ -81,10 +82,12 @@ namespace JadeFramework.WorkFlow
         /// <summary>
         /// 系统通用
         /// </summary>
-        System,
+        [Description("系统通用")]
+        System = 0,
         /// <summary>
         /// 自定义
         /// </summary>
-        Custom
+        [Description("自定义")]
+        Custom = 1
     }
 }

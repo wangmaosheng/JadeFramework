@@ -56,7 +56,7 @@ namespace JadeFramework.WorkFlow
         /// <summary>
         /// 下一个节点对象
         /// </summary>
-        public FlowNode NextNode { get { return Nodes[NextNodeId]; } }
+        public FlowNode NextNode { get { return NextNodeId != default(Guid) ? Nodes[NextNodeId] : null; }}
 
         /// <summary>
         /// 全部节点
