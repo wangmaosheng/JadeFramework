@@ -26,4 +26,28 @@ namespace JadeFramework.WorkFlow
         /// </summary>
         public virtual string CreateUserId { get; set; }
     }
+
+    /// <summary>
+    /// 第三方流程接入继承的实体
+    /// </summary>
+    public abstract class OtherEntity
+    {
+        /// <summary>
+        /// 构造器
+        /// 初始FlowStatus值为:<see cref="WorkFlowStatus.UnSubmit"/>
+        /// </summary>
+        public OtherEntity()
+        {
+            this.FlowStatus = (int)WorkFlowStatus.UnSubmit;
+        }
+
+        /// <summary>
+        /// 流程状态
+        /// </summary>
+        public virtual int FlowStatus { get; set; }
+        /// <summary>
+        /// 流程操作时间戳
+        /// </summary>
+        public virtual long FlowTime { get; set; }
+    }
 }

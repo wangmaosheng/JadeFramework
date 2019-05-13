@@ -3,6 +3,37 @@
 namespace JadeFramework.WorkFlow
 {
     /// <summary>
+    /// 流程状态
+    /// </summary>
+    public enum WorkFlowStatus : int
+    {
+        /// <summary>
+        /// 未提交
+        /// </summary>
+        [Description("未提交")]
+        UnSubmit = -1,
+        /// <summary>
+        /// 运行中
+        /// </summary>
+        [Description("运行中")]
+        Running = 0,
+        /// <summary>
+        /// 已结束 => 通过
+        /// </summary>
+        [Description("已结束")]
+        IsFinish = 1,
+        /// <summary>
+        /// 不同意
+        /// </summary>
+        [Description("不同意")]
+        Deprecate = 2,
+        /// <summary>
+        /// 流程被退回
+        /// </summary>
+        [Description("已退回")]
+        Back = 3
+    }
+    /// <summary>
     /// 工作流实例运行状态
     /// </summary>
     public enum WorkFlowInstanceStatus
