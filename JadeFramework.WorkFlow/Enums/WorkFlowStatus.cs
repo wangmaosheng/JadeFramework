@@ -13,9 +13,9 @@ namespace JadeFramework.WorkFlow
         [Description("未提交")]
         UnSubmit = -1,
         /// <summary>
-        /// 运行中
+        /// 审核中
         /// </summary>
-        [Description("运行中")]
+        [Description("审核中")]
         Running = 0,
         /// <summary>
         /// 已结束 => 通过
@@ -39,9 +39,9 @@ namespace JadeFramework.WorkFlow
     public enum WorkFlowInstanceStatus
     {
         /// <summary>
-        /// 运行中
+        /// 审核中
         /// </summary>
-        [Description("运行中")]
+        [Description("审核中")]
         Running = 0,
         /// <summary>
         /// 已结束 => 通过
