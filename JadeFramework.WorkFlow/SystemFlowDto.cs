@@ -13,5 +13,9 @@
         /// 表单地址
         /// </summary>
         public string FormUrl { get; set; }
+        /// <summary>
+        /// 当前用户ID
+        /// </summary>
+        public string UserId { get; set; }
     }
 }
