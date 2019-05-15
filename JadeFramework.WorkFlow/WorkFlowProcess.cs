@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace JadeFramework.WorkFlow
 {
+    /// <summary>
+    /// 流程进程实体
+    /// </summary>
     public class WorkFlowProcess
     {
         /// <summary>
