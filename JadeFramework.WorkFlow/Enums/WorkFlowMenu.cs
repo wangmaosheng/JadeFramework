@@ -22,11 +22,11 @@ namespace JadeFramework.WorkFlow
         /// </summary>
         [Description("提交")]
         Submit = 1,
-        ///// <summary>
-        ///// 再次提交
-        ///// </summary>
-        //[Description("再次提交")]
-        //ReSubmit = 1,
+        /// <summary>
+        /// 再次提交
+        /// </summary>
+        [Description("再次提交")]
+        ReSubmit = 101,
         /// <summary>
         /// 同意
         /// </summary>
