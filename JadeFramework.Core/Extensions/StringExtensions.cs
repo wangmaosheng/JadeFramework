@@ -740,5 +740,33 @@ namespace JadeFramework.Core.Extensions
             }
             return str.Replace("\r", "").Replace("\n", "");
         }
+
+        /// <summary>
+        /// url进行编码
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string ToUrlEncode(this string url)
+        {
+            if (url.IsNullOrEmpty())
+            {
+                return url;
+            }
+            return System.Web.HttpUtility.UrlEncode(url);
+        }
+
+        /// <summary>
+        /// url进行解码
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string ToUrlDecode(this string url)
+        {
+            if (url.IsNullOrEmpty())
+            {
+                return url;
+            }
+            return System.Web.HttpUtility.UrlDecode(url);
+        }
     }
 }
