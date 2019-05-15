@@ -56,21 +56,6 @@ namespace JadeFramework.WorkFlow
             }
         }
     }
-    public static class FlowNodeExtension
-    {
-        /// <summary>
-        /// 判断节点是否结束
-        /// </summary>
-        /// <param name="nodeType"></param>
-        /// <returns></returns>
-        public static int ToIsFinish(this WorkFlowInstanceNodeType nodeType)
-        {
-            return nodeType == WorkFlowInstanceNodeType.EndRound 
-                ? (int)WorkFlowInstanceStatus.IsFinish 
-                : (int)WorkFlowInstanceStatus.Running;
-        }
-
-    }
 
     /// <summary>
     /// 节点信息
