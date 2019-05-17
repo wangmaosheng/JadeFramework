@@ -25,6 +25,10 @@ namespace JadeFramework.WorkFlow
         /// </summary>
         public string UserId { get; set; }
         /// <summary>
+        /// 用户名
+        /// </summary>
+        public string UserName { get; set; }
+        /// <summary>
         /// 可操作按钮集合
         /// <see cref="WorkFlowMenu"/>集合
         /// </summary>
