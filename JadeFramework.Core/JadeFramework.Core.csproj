@@ -12,7 +12,7 @@
     <FileVersion>1.0.1.7</FileVersion>
     <Version>1.0.1.7</Version>
     <Description>通用帮助类、扩展等等。</Description>
-    <PackageReleaseNotes>HttpClient 扩展</PackageReleaseNotes>
+    <PackageReleaseNotes>Page实体修改</PackageReleaseNotes>
     <NeutralLanguage></NeutralLanguage>
   </PropertyGroup>
 
