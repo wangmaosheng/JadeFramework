@@ -10,7 +10,7 @@
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/22044556?s=40&amp;u=d08c24d125e91789e90fe42d1576f1a9d88db8ba&amp;v=4</PackageIconUrl>
     <AssemblyVersion>1.0.1.7</AssemblyVersion>
     <FileVersion>1.0.1.7</FileVersion>
-    <Version>1.0.1.7</Version>
+    <Version>1.0.1.8</Version>
     <Description>通用帮助类、扩展等等。</Description>
     <PackageReleaseNotes>Page实体修改</PackageReleaseNotes>
     <NeutralLanguage></NeutralLanguage>
