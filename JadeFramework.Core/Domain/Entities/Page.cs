@@ -5,9 +5,16 @@ namespace JadeFramework.Core.Domain.Entities
     /// <summary>
     /// 分页实体
     /// </summary>
-    /// <typeparam name="T">实体</typeparam>
+    /// <typeparam name="TEntity">实体</typeparam>
     public class Page<TEntity> where TEntity : class
     {
+        /// <summary>
+        /// 构造器
+        /// </summary>
+        public Page()
+        {
+            this.Items = new List<TEntity>();
+        }
         /// <summary>
         /// 当前页
         /// </summary>

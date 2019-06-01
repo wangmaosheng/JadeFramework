@@ -58,7 +58,9 @@ namespace JadeFramework.WorkFlow
         [Description("退回")]
         Back = 7,
         /// <summary>
-        /// 终止
+        /// 终止，即取消流程
+        /// 刚开始提交，下一个节点未审批情况，流程发起人可以终止
+        /// 终止时：流程实例，操作历史，审批历史将被物理删除
         /// </summary>
         [Description("终止")]
         Stop = 8,
