@@ -9,23 +9,56 @@ namespace JadeFramework.WorkFlow
     /// </summary>
     public class FlowNode
     {
-        public const string START = "start round mix";  //开始
-        public const string END = "end round";          //结束
-        public const string NODE = "node";              //自动节点 =>条件判断 SQL、结果值判断，
-        public const string Task = "task";              //任务节点
-        public const string FORK = "fork";              //分流 =>代表一个任务可以走多个分支
-        public const string JOIN = "join";              //合流 =>代表合并多个分支得出最终的结果
-        public const string Chat = "chat";              //会签 串行/并行两种方式
+        /// <summary>
+        /// 开始
+        /// </summary>
+        public const string START = "start round mix";
+        /// <summary>
+        /// 结束
+        /// </summary>
+        public const string END = "end round";
+        /// <summary>
+        /// 自动节点 =>条件判断 SQL、结果值判断
+        /// </summary>
+        public const string NODE = "node";
+        /// <summary>
+        /// 任务节点
+        /// </summary>
+        public const string Task = "task";
+        /// <summary>
+        /// 分流 =>代表一个任务可以走多个分支
+        /// </summary>
+        public const string FORK = "fork";
+        /// <summary>
+        /// 合流 =>代表合并多个分支得出最终的结果
+        /// </summary>
+        public const string JOIN = "join";
+        /// <summary>
+        /// 会签 串行/并行两种方式
+        /// </summary>
+        public const string Chat = "chat";
 
+        /// <summary>
+        /// id
+        /// </summary>
         [JsonProperty("id")]
         public Guid Id { get; set; }
 
+        /// <summary>
+        /// 节点名称
+        /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
 
+        /// <summary>
+        /// 类型
+        /// </summary>
         [JsonProperty("type")]
         public string Type { get; set; }
 
+        /// <summary>
+        /// 节点信息
+        /// </summary>
         [JsonProperty("setInfo")]
         public FlowNodeSetInfo SetInfo { get; set; }
 
@@ -68,11 +101,26 @@ namespace JadeFramework.WorkFlow
         [JsonProperty("Nodedesignatedata")]
         public Nodedesignatedata Nodedesignatedata { get; set; }
 
-        public const string SPECIAL_USER = "SPECIAL_USER";  //指定用户
-        public const string ALL_USER = "ALL_USER";  //所有用户
-        public const string SPECIAL_ROLE = "SPECIAL_ROLE";
         /// <summary>
-        /// 节点执行权限类型 SPECIAL_USER ALL_USER SPECIAL_ROLE
+        /// 指定用户
+        /// </summary>
+        public const string SPECIAL_USER = "SPECIAL_USER";
+        /// <summary>
+        /// 所有用户
+        /// </summary>
+        public const string ALL_USER = "ALL_USER";
+        /// <summary>
+        /// 制定角色
+        /// </summary>
+        public const string SPECIAL_ROLE = "SPECIAL_ROLE";
+
+        /// <summary>
+        /// SQL自动获取
+        /// </summary>
+        public const string SQL = "SQL";
+
+        /// <summary>
+        /// 节点执行权限类型 SPECIAL_USER ALL_USER SPECIAL_ROLE SQL
         /// </summary>
         public string NodeDesignate { get; set; }
 
@@ -108,6 +156,12 @@ namespace JadeFramework.WorkFlow
         /// </summary>
         [JsonProperty("orgs")]
         public string[] Orgs { get; set; }
+
+        /// <summary>
+        /// sql
+        /// </summary>
+        [JsonProperty("sql")]
+        public string SQL { get; set; }
     }
 
     /// <summary>

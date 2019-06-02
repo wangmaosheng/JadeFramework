@@ -2,6 +2,9 @@
 
 namespace JadeFramework.WorkFlow
 {
+    /// <summary>
+    /// 审核人类型
+    /// </summary>
     public enum MakerListEnum
     {
         /// <summary>
@@ -19,11 +22,25 @@ namespace JadeFramework.WorkFlow
         /// <summary>
         /// 指定某些角色
         /// </summary>
-        Roles
+        Roles,
+        /// <summary>
+        /// 通过SQL获取
+        /// </summary>
+        SQL
     }
+    /// <summary>
+    /// 审核人实体
+    /// </summary>
     public class MakerListModel
     {
+        /// <summary>
+        /// 人员ID
+        /// </summary>
         public List<long> UserIds { get; set; }
+
+        /// <summary>
+        /// 人员类型
+        /// </summary>
         public MakerListEnum MakerType { get; set; }
     }
 }

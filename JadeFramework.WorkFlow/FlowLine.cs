@@ -85,15 +85,9 @@
         [Description("系统通用")]
         System = 0,
         /// <summary>
-        /// 自定义
+        /// 自定义SQL
         /// </summary>
         [Description("自定义")]
-        Custom = 1,
-        /// <summary>
-        /// 自定义类型最终执行SQL
-        /// 注：自定义的情况，因为系统无法区分流程的最终的流向，所以只能人为用SQL先判断出执行的结果，再有系统自动判断
-        /// </summary>
-        [Description("自定义类型最终执行SQL")]
-        CustomResult = 2
+        Custom = 1
     }
 }
