@@ -58,7 +58,7 @@ namespace JadeFramework.WorkFlow
         [Description("退回")]
         Back = 7,
         /// <summary>
-        /// 终止,流程意外报错终止
+        /// 终止，流程被暂停,流程意外报错终止
         /// </summary>
         [Description("终止")]
         Stop = 8,
