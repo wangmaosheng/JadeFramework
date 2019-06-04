@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace JadeFramework.WorkFlow
 {
@@ -44,5 +45,11 @@ namespace JadeFramework.WorkFlow
         /// 流程状态改变实体
         /// </summary>
         public WorkFlowStatusChange StatusChange { get; set; }
+
+        /// <summary>
+        /// 参数信息
+        /// 用于节点获取、条件判断
+        /// </summary>
+        public Dictionary<string, object> OptionParams { get; set; }
     }
 }

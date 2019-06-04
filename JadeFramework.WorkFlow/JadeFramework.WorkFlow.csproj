@@ -8,9 +8,9 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Authors>Jade</Authors>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/22044556?s=40&amp;u=d08c24d125e91789e90fe42d1576f1a9d88db8ba&amp;v=4</PackageIconUrl>
-    <Version>1.0.2.4</Version>
+    <Version>1.0.2.5</Version>
     <Description>基于工作流封装</Description>
-    <PackageReleaseNotes>流程节点实体、连线修改</PackageReleaseNotes>
+    <PackageReleaseNotes>流转实例修改</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
