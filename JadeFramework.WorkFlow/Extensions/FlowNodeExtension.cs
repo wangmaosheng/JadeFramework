@@ -13,7 +13,7 @@
         public static int ToIsFinish(this WorkFlowInstanceNodeType nodeType)
         {
             return nodeType == WorkFlowInstanceNodeType.EndRound
-                ? (int)WorkFlowInstanceStatus.IsFinish
+                ? (int)WorkFlowInstanceStatus.Finish
                 : (int)WorkFlowInstanceStatus.Running;
         }
 
