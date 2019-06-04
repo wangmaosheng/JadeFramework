@@ -36,7 +36,7 @@ namespace JadeFramework.WorkFlow
     /// <summary>
     /// 工作流实例运行状态
     /// </summary>
-    public enum WorkFlowInstanceStatus
+    public enum WorkFlowInstanceStatus : int
     {
         /// <summary>
         /// 审核中
@@ -63,7 +63,7 @@ namespace JadeFramework.WorkFlow
     /// <summary>
     /// 工作流实例节点类型
     /// </summary>
-    public enum WorkFlowInstanceNodeType
+    public enum WorkFlowInstanceNodeType : int
     {
         /// <summary>
         /// 无法运行

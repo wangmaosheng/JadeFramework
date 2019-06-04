@@ -2,7 +2,6 @@
 {
     using Newtonsoft.Json;
     using System;
-    using System.ComponentModel;
 
     /// <summary>
     /// 流程连线
@@ -56,17 +55,17 @@
     /// </summary>
     public class FlowLineSetInfo
     {
-        /// <summary>
-        /// 线条ID
-        /// </summary>
-        [JsonProperty("lineId")]
-        public Guid? LineId { get; set; }
+        ///// <summary>
+        ///// 线条ID
+        ///// </summary>
+        //[JsonProperty("lineId")]
+        //public Guid? LineId { get; set; }
 
-        /// <summary>
-        /// 线条类型
-        /// </summary>
-        [JsonProperty("lineType")]
-        public FlowLineSetInfoType? LineType { get; set; }
+        ///// <summary>
+        ///// 线条类型
+        ///// </summary>
+        //[JsonProperty("lineType")]
+        //public FlowLineSetInfoType? LineType { get; set; }
 
         /// <summary>
         /// 自定义线条类型SQL
@@ -74,20 +73,20 @@
         [JsonProperty("customSQL")]
         public string CustomSQL { get; set; }
     }
-    /// <summary>
-    /// 线条类型
-    /// </summary>
-    public enum FlowLineSetInfoType
-    {
-        /// <summary>
-        /// 系统通用
-        /// </summary>
-        [Description("系统通用")]
-        System = 0,
-        /// <summary>
-        /// 自定义SQL
-        /// </summary>
-        [Description("自定义")]
-        Custom = 1
-    }
+    ///// <summary>
+    ///// 线条类型
+    ///// </summary>
+    //public enum FlowLineSetInfoType
+    //{
+    //    /// <summary>
+    //    /// 系统通用
+    //    /// </summary>
+    //    [Description("系统通用")]
+    //    System = 0,
+    //    /// <summary>
+    //    /// 自定义SQL
+    //    /// </summary>
+    //    [Description("自定义")]
+    //    Custom = 1
+    //}
 }
