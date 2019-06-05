@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace JadeFramework.Core.Extensions
 {
@@ -54,10 +52,11 @@ namespace JadeFramework.Core.Extensions
         /// 时间转换成时间戳
         /// </summary>
         /// <param name="nowTime">当前时间</param>
+        /// <param name="timeZoneHours">时区间隔默认东八区减8小时</param>
         /// <returns></returns>
-        public static long ToTimeStamp(this DateTime nowTime)
+        public static long ToTimeStamp(this DateTime nowTime, int timeZoneHours = -8)
         {
-            TimeSpan ts = nowTime.AddHours(-8) - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            TimeSpan ts = nowTime.AddHours(timeZoneHours) - new DateTime(1970, 1, 1, 0, 0, 0, 0);
             return Convert.ToInt64(ts.TotalSeconds);
         }
 
@@ -65,13 +64,14 @@ namespace JadeFramework.Core.Extensions
         /// 时间戳转换成时间
         /// </summary>
         /// <param name="timestamp">时间戳</param>
+        /// <param name="timeZoneHours">时区间隔默认东八区加8小时</param>
         /// <returns></returns>
-        public static DateTime ToDateTime(this long timestamp)
+        public static DateTime ToDateTime(this long timestamp, int timeZoneHours = 8)
         {
             DateTime dtStart = new DateTime(1970, 1, 1);
             long lTime = long.Parse(timestamp + "0000000");
             TimeSpan toNow = new TimeSpan(lTime);
-            return dtStart.Add(toNow);
+            return dtStart.Add(toNow).AddHours(timeZoneHours);
         }
     }
 }

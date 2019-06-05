@@ -8,11 +8,11 @@
     <Copyright>Jade</Copyright>
     <Authors>Jade</Authors>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/22044556?s=40&amp;u=d08c24d125e91789e90fe42d1576f1a9d88db8ba&amp;v=4</PackageIconUrl>
-    <AssemblyVersion>1.0.1.9</AssemblyVersion>
-    <FileVersion>1.0.1.9</FileVersion>
-    <Version>1.0.1.9</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.2</Version>
     <Description>通用帮助类、扩展等等。</Description>
-    <PackageReleaseNotes>时间转换扩展方法问题修复</PackageReleaseNotes>
+    <PackageReleaseNotes>时间戳转换缺少时区修改</PackageReleaseNotes>
     <NeutralLanguage></NeutralLanguage>
   </PropertyGroup>
 
