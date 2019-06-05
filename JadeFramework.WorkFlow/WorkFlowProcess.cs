@@ -58,5 +58,31 @@ namespace JadeFramework.WorkFlow
         /// 执行过的任务节点
         /// </summary>
         public List<FlowNode> ExecutedNode { get; set; }
+
+        /// <summary>
+        /// 流程信息
+        /// </summary>
+        public WorkFlowProcessFlowData FlowData { get; set; }
+    }
+
+    /// <summary>
+    /// 流程信息
+    /// </summary>
+    public class WorkFlowProcessFlowData
+    {
+        /// <summary>
+        /// 流程是否结束
+        /// </summary>
+        public int? IsFinish { get; set; }
+
+        /// <summary>
+        /// 审批状态
+        /// </summary>
+        public int Status { get; set; }
+
+        /// <summary>
+        /// 当前节点
+        /// </summary>
+        public FlowNode CurrentNode { get; set; }
     }
 }

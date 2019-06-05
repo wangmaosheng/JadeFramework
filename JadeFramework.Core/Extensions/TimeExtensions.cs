@@ -57,7 +57,7 @@ namespace JadeFramework.Core.Extensions
         /// <returns></returns>
         public static long ToTimeStamp(this DateTime nowTime)
         {
-            TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            TimeSpan ts = nowTime.AddHours(-8) - new DateTime(1970, 1, 1, 0, 0, 0, 0);
             return Convert.ToInt64(ts.TotalSeconds);
         }
 
