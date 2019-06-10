@@ -23,11 +23,6 @@ namespace JadeFramework.WorkFlow
         [Description("提交")]
         Submit = 1,
         /// <summary>
-        /// 再次提交
-        /// </summary>
-        [Description("再次提交")]
-        ReSubmit = 101,
-        /// <summary>
         /// 同意
         /// </summary>
         [Description("同意")]
@@ -63,7 +58,7 @@ namespace JadeFramework.WorkFlow
         [Description("终止")]
         Stop = 8,
         /// <summary>
-        /// 已阅
+        /// 已阅，用通知节点
         /// </summary>
         [Description("已阅")]
         View = 9,
@@ -98,6 +93,11 @@ namespace JadeFramework.WorkFlow
         /// 终止时：流程实例，操作历史，审批历史将被物理删除
         /// </summary>
         [Description("撤回")]
-        Withdraw = 15
+        Withdraw = 15,
+        /// <summary>
+        /// 再次提交
+        /// </summary>
+        [Description("再次提交")]
+        ReSubmit = 101
     }
 }

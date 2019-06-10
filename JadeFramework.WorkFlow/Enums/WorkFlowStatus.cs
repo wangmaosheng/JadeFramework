@@ -104,6 +104,11 @@ namespace JadeFramework.WorkFlow
         /// 条件节点
         /// </summary>
         [Description("条件节点")]
-        ConditionNode = 6
+        ConditionNode = 6,
+        /// <summary>
+        /// 通知节点
+        /// </summary>
+        [Description("通知节点")]
+        ViewNode = 7,
     }
 }

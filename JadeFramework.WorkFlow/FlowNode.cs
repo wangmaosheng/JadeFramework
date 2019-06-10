@@ -37,6 +37,10 @@ namespace JadeFramework.WorkFlow
         /// 会签 串行/并行两种方式
         /// </summary>
         public const string Chat = "chat";
+        /// <summary>
+        /// 通知节点
+        /// </summary>
+        public const string View = "view";
 
         /// <summary>
         /// id
@@ -84,6 +88,8 @@ namespace JadeFramework.WorkFlow
                     return WorkFlowInstanceNodeType.ChatNode;
                 case FlowNode.NODE:
                     return WorkFlowInstanceNodeType.ConditionNode;
+                case FlowNode.View:
+                    return WorkFlowInstanceNodeType.ViewNode;
                 default:
                     return WorkFlowInstanceNodeType.NotRun;
             }
@@ -113,14 +119,16 @@ namespace JadeFramework.WorkFlow
         /// 制定角色
         /// </summary>
         public const string SPECIAL_ROLE = "SPECIAL_ROLE";
-
         /// <summary>
         /// SQL自动获取
         /// </summary>
         public const string SQL = "SQL";
-
         /// <summary>
-        /// 节点执行权限类型 SPECIAL_USER ALL_USER SPECIAL_ROLE SQL
+        /// 流程发起人
+        /// </summary>
+        public const string CREATEUSER = "CREATEUSER";
+        /// <summary>
+        /// 节点执行权限类型 SPECIAL_USER ALL_USER SPECIAL_ROLE SQL CREATEUSER
         /// </summary>
         public string NodeDesignate { get; set; }
 
