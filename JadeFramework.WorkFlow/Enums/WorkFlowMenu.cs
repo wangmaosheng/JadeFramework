@@ -95,6 +95,11 @@ namespace JadeFramework.WorkFlow
         [Description("撤回")]
         Withdraw = 15,
         /// <summary>
+        /// 表单打印
+        /// </summary>
+        [Description("打印")]
+        Print = 16,
+        /// <summary>
         /// 再次提交
         /// </summary>
         [Description("再次提交")]
