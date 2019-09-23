@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NodaTime;
+using System;
 
 namespace JadeFramework.Core.Extensions
 {
@@ -72,6 +73,18 @@ namespace JadeFramework.Core.Extensions
             long lTime = long.Parse(timestamp + "0000000");
             TimeSpan toNow = new TimeSpan(lTime);
             return dtStart.Add(toNow).AddHours(timeZoneHours);
+        }
+
+        /// <summary>
+        /// e : DateTime.Now.ToCstTime()
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        public static DateTime ToCstTime(this DateTime time)
+        {
+            Instant now = SystemClock.Instance.GetCurrentInstant();
+            var shanghaiZone = DateTimeZoneProviders.Tzdb["Asia/Shanghai"];
+            return now.InZone(shanghaiZone).ToDateTimeUnspecified();
         }
     }
 }
