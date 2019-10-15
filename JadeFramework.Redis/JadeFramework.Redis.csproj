@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/wangmaosheng/JadeFramework.git</PackageProjectUrl>
     <Copyright>Jade</Copyright>
     <Authors>Jade</Authors>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/22044556?s=40&amp;u=d08c24d125e91789e90fe42d1576f1a9d88db8ba&amp;v=4</PackageIconUrl>
-    <Version>1.0.1.3</Version>
+    <Version>1.0.1.4</Version>
     <Description>基于Redis简单封装</Description>
-    <PackageReleaseNotes>版本升级</PackageReleaseNotes>
+    <PackageReleaseNotes>升级到2.1</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
