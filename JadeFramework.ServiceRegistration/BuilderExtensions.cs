@@ -3,11 +3,8 @@
     using Consul;
     using JadeFramework.Core.Consul;
     using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Hosting.Server.Features;
-    using Microsoft.AspNetCore.Http.Features;
     using Microsoft.Extensions.Options;
     using System;
-    using System.Linq;
 
     /// <summary>
     /// Consul 中间件扩展
@@ -18,6 +15,7 @@
         /// 服务注册
         /// </summary>
         /// <param name="app"></param>
+        /// <param name="checkOptions"></param>
         /// <returns></returns>
         public static IApplicationBuilder UseServiceRegistration(this IApplicationBuilder app, ServiceCheckOptions checkOptions)
         {
@@ -43,52 +41,33 @@
         }
         private static void OnStop(IApplicationBuilder app, ServiceDiscoveryOptions serviceOptions, IConsulClient consul, IApplicationLifetime lifetime)
         {
+            var serviceId = $"{serviceOptions.Service.Name}_{serviceOptions.Service.Address}:{serviceOptions.Service.Port}";
 
-            var features = app.Properties["server.Features"] as FeatureCollection;
-            var addresses = features.Get<IServerAddressesFeature>()
-                .Addresses
-                .Select(p => new Uri(p));
-
-            foreach (var address in addresses)
-            {
-                var serviceId = $"{serviceOptions.Service.Name}_{address.Host}:{address.Port}";
-
-                consul.Agent.ServiceDeregister(serviceId).GetAwaiter().GetResult();
-            }
+            consul.Agent.ServiceDeregister(serviceId).GetAwaiter().GetResult();
 
         }
 
         private static void OnStart(IApplicationBuilder app, ServiceDiscoveryOptions serviceOptions, IConsulClient consul, IApplicationLifetime lifetime, ServiceCheckOptions checkOptions)
         {
 
-            var features = app.Properties["server.Features"] as FeatureCollection;
-            var addresses = features.Get<IServerAddressesFeature>()
-                .Addresses
-                .Select(p => new Uri(p));
-
-            foreach (var address in addresses)
+            var serviceId = $"{serviceOptions.Service.Name}_{serviceOptions.Service.Address}:{serviceOptions.Service.Port}";
+            var httpCheck = new AgentServiceCheck()
             {
-                var serviceId = $"{serviceOptions.Service.Name}_{address.Host}:{address.Port}";
+                DeregisterCriticalServiceAfter = TimeSpan.FromMinutes(1),
+                Interval = TimeSpan.FromSeconds(serviceOptions.Service.Interval),
+                HTTP = $"http://{serviceOptions.Service.Address}:{serviceOptions.Service.Port}/{checkOptions.HealthCheckUrl}"
+            };
 
-                var httpCheck = new AgentServiceCheck()
-                {
-                    DeregisterCriticalServiceAfter = TimeSpan.FromMinutes(1),
-                    Interval = TimeSpan.FromSeconds(serviceOptions.Service.Interval),
-                    HTTP = new Uri(address, checkOptions.HealthCheckUrl).OriginalString
-                };
+            var registration = new AgentServiceRegistration()
+            {
+                Checks = new[] { httpCheck },
+                Address = serviceOptions.Service.Address,
+                ID = serviceId,
+                Name = serviceOptions.Service.Name,
+                Port = serviceOptions.Service.Port
+            };
 
-                var registration = new AgentServiceRegistration()
-                {
-                    Checks = new[] { httpCheck },
-                    Address = address.Host,
-                    ID = serviceId,
-                    Name = serviceOptions.Service.Name,
-                    Port = address.Port
-                };
-
-                consul.Agent.ServiceRegister(registration).GetAwaiter().GetResult();
-            }
-
+            consul.Agent.ServiceRegister(registration).GetAwaiter().GetResult();
         }
     }
 }
