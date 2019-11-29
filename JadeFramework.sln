@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JadeFramework.Cache", "JadeFramework.Cache\JadeFramework.Cache.csproj", "{3AAA8EA8-146E-4FCB-B44A-347426D466E8}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JadeFramework.Weixin", "JadeFramework.Weixin\JadeFramework.Weixin.csproj", "{F428B696-DD91-4595-9475-4B9838F42F83}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JadeFramework.WorkFlow", "JadeFramework.WorkFlow\JadeFramework.WorkFlow.csproj", "{91CEC67F-CEFA-49E6-8C65-6C121E59851A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JadeFramework.Test", "JadeFramework.Test\JadeFramework.Test.csproj", "{D203014A-176A-40AA-AF27-5C7089C88DBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{91CEC67F-CEFA-49E6-8C65-6C121E59851A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91CEC67F-CEFA-49E6-8C65-6C121E59851A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91CEC67F-CEFA-49E6-8C65-6C121E59851A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D203014A-176A-40AA-AF27-5C7089C88DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D203014A-176A-40AA-AF27-5C7089C88DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D203014A-176A-40AA-AF27-5C7089C88DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D203014A-176A-40AA-AF27-5C7089C88DBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

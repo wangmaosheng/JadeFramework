@@ -13,7 +13,7 @@ namespace JadeFramework.WorkFlow
         /// </summary>
         public Entity()
         {
-            this.CreateTime = DateTime.Now.ToTimeStamp();
+            this.CreateTime = DateTime.Now.ToCstTime().ToTimeStamp();
         }
 
         /// <summary>
