@@ -1,24 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <PackageProjectUrl>https://github.com/wangmaosheng/JadeFramework.git</PackageProjectUrl>
     <Copyright>Jade</Copyright>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Authors>Jade</Authors>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/22044556?s=40&amp;u=d08c24d125e91789e90fe42d1576f1a9d88db8ba&amp;v=4</PackageIconUrl>
-    <Version>1.0.3.4</Version>
+    <Version>2.0.0.0</Version>
     <Description>基于工作流封装</Description>
     <PackageReleaseNotes>时间转换修改</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\JadeFramework.WorkFlow.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net5.0\JadeFramework.WorkFlow.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard2.0\JadeFramework.WorkFlow.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\net5.0\JadeFramework.WorkFlow.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
