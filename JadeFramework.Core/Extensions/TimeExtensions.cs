@@ -76,6 +76,7 @@ namespace JadeFramework.Core.Extensions
         }
 
         /// <summary>
+        /// 所有不同操作系统获取时间的方法，统一使用DateTime.Now.ToCstTime()获取，确保Window和Linux获取的时间相同
         /// e : DateTime.Now.ToCstTime()
         /// </summary>
         /// <param name="time"></param>
