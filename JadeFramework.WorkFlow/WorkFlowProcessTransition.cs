@@ -45,11 +45,18 @@ namespace JadeFramework.WorkFlow
         /// 流程状态改变实体
         /// </summary>
         public WorkFlowStatusChange StatusChange { get; set; }
-
+        /// <summary>
+        /// 流程委托实体
+        /// </summary>
+        public FlowAssign Assign { get; set; }
         /// <summary>
         /// 参数信息
         /// 用于节点获取、条件判断
         /// </summary>
         public Dictionary<string, object> OptionParams { get; set; }
+        /// <summary>
+        /// 扩展字段
+        /// </summary>
+        public object Extend { get; set; }
     }
 }
