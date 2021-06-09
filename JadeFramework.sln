@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JadeFramework.Weixin", "Jad
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JadeFramework.WorkFlow", "JadeFramework.WorkFlow\JadeFramework.WorkFlow.csproj", "{91CEC67F-CEFA-49E6-8C65-6C121E59851A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JadeFramework.Test", "JadeFramework.Test\JadeFramework.Test.csproj", "{D203014A-176A-40AA-AF27-5C7089C88DBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JadeFramework.Test", "JadeFramework.Test\JadeFramework.Test.csproj", "{D203014A-176A-40AA-AF27-5C7089C88DBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JadeFramework.TestWeb", "JadeFramework.TestWeb\JadeFramework.TestWeb.csproj", "{E9E65F27-B19F-41BC-8A48-64A994D54752}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{D203014A-176A-40AA-AF27-5C7089C88DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D203014A-176A-40AA-AF27-5C7089C88DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D203014A-176A-40AA-AF27-5C7089C88DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E65F27-B19F-41BC-8A48-64A994D54752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E65F27-B19F-41BC-8A48-64A994D54752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E65F27-B19F-41BC-8A48-64A994D54752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E65F27-B19F-41BC-8A48-64A994D54752}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
