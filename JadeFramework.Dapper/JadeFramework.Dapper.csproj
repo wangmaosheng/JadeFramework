@@ -21,10 +21,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="DapperRepository.Base.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Dapper" Version="1.50.5" />
     <PackageReference Include="Dapper.Contrib" Version="1.50.5" />
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />

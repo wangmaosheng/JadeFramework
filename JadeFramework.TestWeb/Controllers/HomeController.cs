@@ -13,17 +13,14 @@ namespace JadeFramework.TestWeb.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ITestDI _testDI;
 
-        public HomeController(ILogger<HomeController> logger, ITestDI testDI)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _testDI = testDI;
         }
 
         public IActionResult Index()
         {
-            string res = _testDI.Write();
             return View();
         }
 
